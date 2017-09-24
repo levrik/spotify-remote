@@ -142,7 +142,7 @@ class SpotifyRemote(object):
     def version(self):
         return self._call("/service/version.json", service="remote")
 
-    def status(self, return_after=-1, return_on=DEFAULT_RETURN_ON):
+    def status(self, return_after=0, return_on=DEFAULT_RETURN_ON):
         return self._call("/remote/status.json",
                           authed=True,
                           returnafter=return_after,
